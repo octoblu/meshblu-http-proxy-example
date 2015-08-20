@@ -1,7 +1,7 @@
 request = require 'request'
 Meshblu = require 'meshblu'
 MeshbluConfig = require 'meshblu-config'
-debug = require('debug')('meshblu-http-proxy')
+debug = require('debug')('meshblu-http-proxy-example')
 
 class Server
   constructor: ->
