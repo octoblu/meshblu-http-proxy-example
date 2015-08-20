@@ -13,8 +13,14 @@ meshblu-util register --open > meshblu.json
 
 ### To run:
 
+`<REQUEST_BIN_URL>` is a url obtained from http://requestb.in/.
+Go there, obtain a url that looks like `http://requestb.in/1i72tu01`
+and use that as the `<REQUEST_BIN_URL>`. Then use the inspect
+variant to see the proxied HTTP requests: 
+`http://requestb.in/1i72tu01?inspect`
+
 ```shell
-npm start
+REQUEST_BIN_URL=<REQUEST_BIN_URL> npm start
 ```
 
 This project uses `debug`, so to get more information, try these variants with increasing levels of information:

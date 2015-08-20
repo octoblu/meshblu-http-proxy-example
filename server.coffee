@@ -3,6 +3,8 @@ Meshblu = require 'meshblu'
 MeshbluConfig = require 'meshblu-config'
 debug = require('debug')('meshblu-http-proxy-example')
 
+REQUEST_BIN_URL=process.env.REQUEST_BIN_URL
+
 class Server
   constructor: ->
     @config = new MeshbluConfig
@@ -18,7 +20,7 @@ class Server
     debug 'received message', message
 
     fromUuid = message.fromUuid
-    url = 'http://requestb.in/ofkn1eof'
+    url = REQUEST_BIN_URL
     options = {json: message.payload}
 
     request.post url, options, (error, response, body) =>
